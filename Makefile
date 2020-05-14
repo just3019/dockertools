@@ -1,6 +1,8 @@
 #docker
-docker-prune:
+docker-network-prune:
 	docker network prune
+docker-image-prune:
+	docker images | grep none | grep -v grep | awk '{print $3}' | xargs  docker rmi -f
 
 
 # mariadb
