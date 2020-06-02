@@ -1,0 +1,16 @@
+version: "3"
+services:
+  db:
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+    volumes:
+      - mariadb_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    command:  --character-set-server=utf8mb4 --collation-server=utf8mb4_general_ci
+volumes:
+  mariadb_data:

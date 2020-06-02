@@ -1,0 +1,15 @@
+version: "3"
+services:
+  minio:
+    image: minio/minio
+    restart: always
+    volumes:
+      - minio_data:/data
+    environment: 
+      MINIO_ACCESS_KEY: aicso
+      MINIO_SECRET_KEY: aicso2020
+    ports:
+      - "9000:9000"
+    command: server /data
+volumes:
+  minio_data:
