@@ -11,7 +11,7 @@ mariadb-up:
 mariadb-down:
 	docker-compose -f docker-compose-mariadb.yml down
 mariadb-restart:
-	docker-compose -f docker-compose-mariadb.yml down
+	-docker-compose -f docker-compose-mariadb.yml down
 	docker-compose -f docker-compose-mariadb.yml up -d
 
 # redis
@@ -20,7 +20,7 @@ redis-up:
 redis-down:
 	docker-compose -f docker-compose-redis.yml down
 redis-restart:
-	docker-compose -f docker-compose-redis.yml down
+	-docker-compose -f docker-compose-redis.yml down
 	docker-compose -f docker-compose-redis.yml up -d
 
 # postgresql
@@ -29,7 +29,7 @@ postgresql-up:
 postgresql-down:
 	docker-compose -f docker-compose-postgresql.yml down
 postgresql-restart:
-	docker-compose -f docker-compose-postgresql.yml down
+	-docker-compose -f docker-compose-postgresql.yml down
 	docker-compose -f docker-compose-postgresql.yml up -d
 
 # mongo
@@ -38,7 +38,7 @@ mongo-up:
 mongo-down:
 	docker-compose -f docker-compose-mongo.yml down
 mongo-restart:
-	docker-compose -f docker-compose-mongo.yml down
+	-docker-compose -f docker-compose-mongo.yml down
 	docker-compose -f docker-compose-mongo.yml up -d
 
 # metabase
@@ -47,7 +47,7 @@ metabase-up:
 metabase-down:
 	docker-compose -f docker-compose-metabase.yml down
 metabase-restart:
-	docker-compose -f docker-compose-metabase.yml down
+	-docker-compose -f docker-compose-metabase.yml down
 	docker-compose -f docker-compose-metabase.yml up -d
 
 # minio
