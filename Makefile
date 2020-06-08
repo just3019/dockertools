@@ -58,3 +58,12 @@ minio-down:
 minio-restart:
 	-docker-compose -f docker-compose-minio.yml down
 	docker-compose -f docker-compose-minio.yml up -d
+
+# nginx
+nginx-up:
+	docker-compose -f docker-compose-nginx.yml up -d
+nginx-down:
+	docker-compose -f docker-compose-nginx.yml down
+nginx-restart:
+	-docker-compose -f docker-compose-nginx.yml down
+	docker-compose -f docker-compose-nginx.yml up -d

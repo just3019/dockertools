@@ -8,6 +8,7 @@ services:
     environment: 
       MINIO_ACCESS_KEY: aicso
       MINIO_SECRET_KEY: aicso2020
+      MINIO_ETCD_PATH_PREFIX: minio
     ports:
       - "9000:9000"
     command: server /data
