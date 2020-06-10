@@ -1,0 +1,13 @@
+version: "3"
+services:
+  fe:
+    image: 192.168.19.199:5001/aicso/fe:1.5-develop
+    environment:
+      TZ: "Asia/Shanghai"
+    restart: always
+    labels:
+      - "traefik.enable=true"
+    volumes:
+      - ./config/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+    ports:
+      - "8889:80"
