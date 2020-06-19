@@ -65,7 +65,7 @@ nginx-up:
 nginx-down:
 	docker-compose -f docker-compose-nginx.yml down
 nginx-restart:
-	docker-compose -f docker-compose-nginx.yml down
+	-docker-compose -f docker-compose-nginx.yml down
 	docker-compose -f docker-compose-nginx.yml up -d
 
 
