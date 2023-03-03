@@ -79,3 +79,9 @@ fe-restart:
 	-docker-compose -f docker-compose-app-fe.yml down
 	-docker-compose -f docker-compose-app-fe.yml pull
 	docker-compose -f docker-compose-app-fe.yml up -d 
+
+# rocketmq
+rocketmq-up:
+	docker-compose -f docker-compose-rocketmq.yml up -d 
+rocketmq-down:
+	docker-compose -f docker-compose-rocketmq.yml down 
