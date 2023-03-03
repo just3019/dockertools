@@ -25,3 +25,9 @@ postgresql-restart:  postgresql 重启
 mongo-up:  mongo 启动
 mongo-down:   mongo 关闭
 mongo-restart:   mongo 重启
+
+# rocketmq
+rocketmq-up: 启动rocketmq
+rocketmq-down: 停止rocketmq
+
+参考 https://github.com/apache/rocketmq-docker
